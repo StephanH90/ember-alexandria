@@ -53,7 +53,7 @@
             href="#"
             class="uk-icon-button  cursor-pointer"
             uk-icon="icon: close"
-            {{on "click" (set this.editTitle false)}}
+            {{on "click" this.toggleEditTitle}}
           ></a>
         </span>
       {{else}}
@@ -61,7 +61,7 @@
           href="#"
           class="uk-link-reset"
           data-test-title
-          {{on "click" (set this.editTitle true)}}
+          {{on "click" this.toggleEditTitle}}
         >
           {{@document.title}}
         </a>

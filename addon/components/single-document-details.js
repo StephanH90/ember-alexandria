@@ -35,6 +35,14 @@ export default class SingleDocumentDetailsComponent extends DocumentCard {
       this.documents.enableShortcuts();
     }
   }
+  @action toggleEditTitle() {
+    this.editTitle = !this.editTitle;
+    if (this.editTitle) {
+      this.documents.disableShortcuts();
+    } else {
+      this.documents.enableShortcuts();
+    }
+  }
 
   @action resetState() {
     this.editTitle = false;
